@@ -1,10 +1,133 @@
----
-title: Le Wagon Middleman boilerplate
----
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/background.jpg');">
+      <div class="banner-content">
+        <h1>Some Stuff</h1>
+        <p>Very cool stuff, useful and smart</p>
+        <%= link_to "GET IT", "#", class: "btn btn-primary" %>
+        </div>
+    </div>
 
-<div class="welcome text-center padded">
-  <h1>Welcome to Middleman</h1>
-  <p class="doc">
-    <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
-  </p>
-</div>
+    <!-- Your features code -->
+
+    <div class="container text-center padded">
+      <div class="row">
+
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <%= image_tag "globe.png" %>
+          <h2>Discover the World</h2>
+          <p>Watch -  Choice - Enjoy!!!</p>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <%= image_tag "heart.png" %>
+          <h2>Discover the World</h2>
+          <p>Watch -  Choice - Enjoy!!!</p>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <%= image_tag "dollar.png" %>
+          <h2>Discover the World</h2>
+          <p>Watch -  Choice - Enjoy!!!</p>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <%= image_tag "beer.png" %>
+          <h2>Discover the World</h2>
+          <p>Watch -  Choice - Enjoy!!!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Your cards code -->
+
+    <div class="wrapper-grey padded">
+
+      <div class="container">
+        <h2 class="text-center">Your next trip</h2>
+           <div class="row">
+
+            <div class="col-xs-12 col-sm-4">
+              <div class="card" style= "background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-paris.jpg');">
+                <div class="card-category">Paris</div>
+                  <div class="card-description">
+                    <h2>Seb's Home</h2>
+                    <p>Charming Room w/ Patio</p>
+                  </div>
+              </div>
+                <img class="card-user avatar avatar-large" src="images/seb.jpg">
+                <a href="card-link" href="#"></a>
+            </div>
+
+            <div class="col-xs-12 col-sm-4">
+              <div class="card" style= "background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-brussels.jpeg');">
+                <div class="card-category">Brussels</div>
+                  <div class="card-description">
+                    <h2>Anne's Home</h2>
+                    <p>Lovely house</p>
+                  </div>
+              </div>
+                <img class="card-user avatar avatar-large" src="images/anne.jpg">
+                <a href="card-link" href="#"></a>
+            </div>
+
+            <div class="col-xs-12 col-sm-4">
+              <div class="card" style= "background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-london.jpeg');">
+                <div class="card-category">London</div>
+                  <div class="card-description">
+                    <h2>Romain's Home</h2>
+                    <p>Nice flat in Piccadilly</p>
+                  </div>
+              </div>
+                <img class="card-user avatar avatar-large" src="images/romain.jpeg">
+                <a href="card-link" href="#"></a>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Your newsletter code -->
+
+    <div class="text-center padded">
+      <form action="#">
+        <h2>Get news from us</h2>
+        <p>Leave us your mail and get news from us</p>
+        <label for="your-email">Your email</label>
+        <input type="email" id="your-email" placeholder="you@gmail.com">
+        <input type="submit" value="Sign In">
+      </form>
+    </div>
+
+
+    <!-- Your map code -->
+
+    <div id="map" style="width: 100%; height: 400px;"></div>
+
+      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+        <script type="text/javascript">
+        var myLatlng = new google.maps.LatLng(35.45495458, 139.63140249);
+
+        var myOptions = {
+        zoom: 16,
+        center: myLatlng,
+        scrollwheel: false,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        styles: [] // TODO: replace [] by array from https://snazzymaps.com/
+                };
+
+        var map = new google.maps.Map(document.getElementById('map'), myOptions);
+        var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title: "You are here!"
+        });
+      </script>
+
+
+
+
+
+
+<!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
